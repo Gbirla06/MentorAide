@@ -1,0 +1,64 @@
+.normal{
+    border: 1px solid black;
+    margin: 2px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.main{
+    display: flex;
+    font-size: x-large;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.left{
+    border: 1px solid black;
+    margin: 1px;
+    padding: 5px;
+    width: 30%;
+}
+.right{
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+.input{
+    height: 23px;
+    width: 98%;
+    margin: 5px;
+    padding: 1px;
+}
+.dob_gen{
+    height: 23px;
+    width: 40%;
+    margin: 5px;
+    padding: 1px;
+}
+textarea{
+    width: 98%;
+    margin: 5px;
+    padding: 1px;
+}
+#head{
+    text-align: center;
+    font-size: xx-large;
+    border: 1px solid black;
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+}
+form{
+    border: 1px solid black;
+    width: 80%;
+}
+#button{
+    height: 23px;
+    margin: 5px;
+    padding: 1px;
+}
