@@ -1,5 +1,5 @@
 .container{
-    width: 100%;
+    width: 60%;
     align-items: center;
     justify-content: center;
 }
@@ -60,7 +60,7 @@ textarea{
 }
 .form{
     border: 1px solid black;
-    width: 80%;
+    width: 100%;
 }
 #button{
     height: 23px;
