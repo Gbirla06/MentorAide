@@ -1,0 +1,53 @@
+.container{
+    align-items: center;
+    width: 100%;
+}
+h2{
+    color: rgb(78, 172, 254);
+}
+input,textarea,button{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 1cm;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    border: 1px solid rgba(190, 195, 199, 0.543);
+}
+.header{
+    text-align: center;
+    background-color: rgb(78, 172, 254);
+    color: white;
+    margin: 0;
+    height: 3cm;
+}
+#skill{
+    height: 1cm;
+    width: 70%;
+    border: 1px solid white;
+    background-color: rgba(190, 195, 199, 0.543);
+    padding: 5px;
+    margin: 0;    
+}
+.project{
+    padding: 5px;
+    border: 1px solid rgba(190, 195, 199, 0.543);
+}
+.contact{
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 30%;
+}
+input:focus,textarea:focus{
+    outline-width: 0;
+}
+button{
+    color: white;
+    background-color: rgb(78, 172, 254);
+}
