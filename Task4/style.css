@@ -1,21 +1,31 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans';
+/*General Styles*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
 ul,
 nav {
 	list-style: none;
 }
+
 a {
 	text-decoration: none;
 	opacity: 0.75;
 	color: #fff;
 }
+
 a:hover {
 	opacity: 1;
 }
+
 a.btn {
 	border-radius: 4px;
 	text-transform: uppercase;
@@ -24,82 +34,94 @@ a.btn {
 	background-color: #3f51b5;
 	opacity: 1;
 }
+
 section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 100px 80px;
 }
-h1{
-    font: bold 50px "Open Sans", sans-serif;
-    margin-bottom: 15px;
+
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-h3{
-    font: 30px "Open Sans", sans-serif;
-    margin-bottom: 10px;
+
+hr {
+	width: 250px;
+	height: 3px;
+	background-color: #3f51b5;
+	border: 0;
+	margin-bottom: 50px;
 }
-.hero-content{
-    @media screen and (max-width: 800px) {
-        margin-top: 100px;
-        width: 100%;
-        height: 100%;
-      }
+
+section h3.title {
+	text-transform: capitalize;
+	font: bold 32px "Open Sans", sans-serif;
+	margin-bottom: 30px;
+	text-align: center;
 }
-header{
-    width: 100%;
-    display: flex;
-    padding: 40px 50px 30px 50px;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(235, 228, 228);
-    @media screen and (max-width:800px) {
-        display: block;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0;
-    }
-    
-    
+
+section p {
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-align: center;
 }
-nav{
-    display: flex;
-    list-style: none;
-    @media screen and (max-width:800px) {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-    
+
+@media (max-width: 800px) {
+	section {
+		padding: 50px 20px;
+	}
 }
-nav li{
-    padding: 20px;
-    @media screen and (max-width:800px) {
-        padding: 10px;
-    }
+
+/*Header Styles*/
+
+header {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: #fff;
 }
-.hero{
-    min-height: 100vh;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    @media screen and (max-width:800px) {
-        min-height: 70vh;  
-    }
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
 }
-.main{
-    background-image: url('./images/main.jpg');
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-size: cover;
-    z-index: -1;
-    background-color:#80a3db;
-    
+
+header h2 {
+	 font-family: "Quicksand", sans-serif; 
+} 
+
+
+header nav {
+	display: flex;
+	margin-right: -15px;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+	header {
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+
+	header h2 {
+		margin-bottom: 15px;
+	}
 }
 
 input{
@@ -116,6 +138,7 @@ input{
         width: 70%;
     }
 }
+
 button{
     font-weight: bold;
     font-size: medium;
@@ -128,179 +151,207 @@ button{
     height: 57px;
     width: 255px;
 }
-.destination{
-    text-align: center;
-    margin-top: 30px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (max-width:800px) {
-        display: block;
-        padding-top: 20px;
-        margin: 0;
-    }
 
-}
-.tourPackage h2{
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(52, 52, 48);
-}
-.destination h3, .ourAdventure h3{
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(52, 52, 48);
-}
-.destination p{
-    line-height: 2;
-    max-width: 800px;
-}
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width:800px) {
-        display: block;
-        margin: 0;
+/*Hero Styles*/
 
-    }
-}
-li{
-    list-style: none;
-}
-.small{
-    /* flex-basis: 30%; */
-    min-width: 350px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    margin: 15px;
-    @media screen and (max-width:800px) {
-        max-width: 100%;
-        width: 98%; 
-    }
-}
-.large{
-    margin: 15px;
-    min-width: 800px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    @media screen and (max-width:800px) {
-        min-width: 98%;
-    }
+.hero {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #fff;
 }
 
-.line{
-    min-width: 17%;
-    height: 3px;
-    margin: 30px;
-    background-color: #3f51b5;
-    @media screen and (max-width:800px) {
-        min-width: 40%;
-    }
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #80a3db;
 }
-.imageContainer{
-    display: flex;
-    @media screen and (max-width:800px) {
-        display: block;
-    }
+
+.hero h1 {
+	font: bold 60px "Open Sans", sans-serif;
+	margin-bottom: 15px;
 }
-.tourPackage{
-    background-color: #f5f5f5;
-    /* width: 100%; */
-    display: flex;
+
+.hero h3 {
+	font: normal 28px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+}
+
+.hero a.button {
+	padding: 20px 46px;
+}
+
+
+@media (max-width: 800px) {
+	.hero {
+		min-height: 600px;
+	}
+
+	.hero h1 {
+		font-size: 48px;
+	}
+
+	.hero h3 {
+		font-size: 24px;
+	}
+
+	.hero a.btn {
+		padding: 15px 40px;
+	}
+}
+
+/*Destinations Section*/
+
+.destinations h3{
+    font: normal 40px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+.destinations .grid li {
+	height: 350px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.destinations .grid li.small {
+	flex-basis: 30%;
+}
+
+.destinations .grid li.large {
+	flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+	.destinations .grid li.small,
+	.destinations .grid li.large {
+		flex-basis: 50%;
+	}
+	
+}
+
+@media (max-width: 800px) {
+	.destinations .grid li.small,
+	.destinations .grid li.large {
+		flex-basis: 100%;
+	}
+}
+
+
+/*Packages Section*/
+.packages{
+	background-color: #f5f5f5;
+}
+.packages .grid li {
+	padding: 50px;
+	flex-basis: 50%;
+	text-align: center;
+}
+
+.packages .grid li i {
+	color: #8c9eff;
+}
+
+.packages h3, .packages h2 {
+	font-size: 30px;
+	margin: 25px 0;
+}
+
+@media (max-width: 800px) {
+	.packages .grid li {
+		flex-basis: 100%;
+		padding: 20px;
+	}
+}
+
+/*ourAdventure Section*/
+.ourAdventure h3{
+	margin: 25px 0;
+	padding: 20px 0;
+	font-size: 40px;
+	font-weight: 300;
+}
+.quotes{
+	font-size: 22px;
+	
+}
+.ourAdventure h4{
+	font-weight: 300;
+	line-height: 40px;
+}
+.quotes, .ourAdventure{
+	display: flex;
     flex-direction: column;
-    padding: 20px;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
-}
-#tourp{
-    max-width: 50%;
-    line-height: 1cm;
-    @media screen and (max-width:800px) {
-        min-width: 100%;
-    }
-}
-.grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px;
-    @media screen and (max-width:800px) {
-       display: block;
-    }
-}
-.icons{
-    width: 70px;
-    height: 70px;
-    color:#80a3db;
-    font-weight: bold;
-}
-.grid li{
-    margin: 50px;
-    padding: 20px;
-    text-align: center;
-    @media screen and (max-width:800px) {
-        margin: 10px;
-        padding: 10px;
-     }
-}
-.grid li p{
-    line-height: 1cm;
-}
-.grid h3{
-    margin: 20px;
-    font-size: 30px;
-    font-weight:bolder;
-    color: rgb(86, 86, 78);
-    @media screen and (max-width:800px) {
-        width: 100%;
-        margin: 20px 0;
-    }
-    
-}
-.ourAdventure{
-    padding-top: 100px;
-}
-.quotes .ourAdventure{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	line-height: 1.5;
+	margin: 40px 0 25px;
+	padding: 20px 0;
     
 }
 .quotes{
-    width: 47%;
-    margin: 20px;
-    @media screen and (max-width:800px) {
-        width: 100%;
+	width: 47%;
+	text-align: center;
+}
+	
+.author{
+	font-size: 18px;
+}
+@media (max-width: 800px) {
+	.ourAdventure .quote {
+		width: 100%;
+		font-size: 18px;
+		margin: 15px 0;
         padding: 10px 20px;
-    }
+	}
+
+	.ourAdventure .author {
+		font-size: 14px;
+	}
 }
-.quotes p{
-    color: rgb(99, 99, 91);
-    margin: 40px;
-}
-.quotes h4{
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(99, 99, 91);
-}
+
+/*Contact Section*/
+
 .learnMore{
-    background-color: #f5f5f5;
-    padding-top: 100px;
-    padding-bottom: 30px;
+	background-color: #f5f5f5;
 }
 .learnMore h3{
-    margin-bottom: 40px;
+	font-size: 30px;
+	margin: 25px 0;
 }
+.learnMore {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.learnMore .form{
+	display: flex;
+	align-items: center;
+}
+@media (max-width: 1000px) {
+	.learnMore .form{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+}
+
+/*Footer Section*/
+
 footer{
     display: flex;
     align-items: center;
@@ -331,3 +382,4 @@ footer ul{
     justify-content: center;
     text-align: center;
 }
+
